@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiln &amp; Clay · Weekend Pottery Classes in Lisbon</title>
+<meta name="description" content="Learn to throw on the wheel in a warm, working ceramics studio in Lisbon. Small weekend classes for total beginners. No experience needed. Book a seat.">
+<link rel="canonical" href="https://kilnandclay.pt/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kiln & Clay · Weekend Pottery Classes in Lisbon">
+<meta property="og:description" content="Small weekend pottery classes for total beginners, in a warm working studio in Lisbon. No experience needed.">
+<meta property="og:image" content="/images/hero.jpg">
+<meta property="og:url" content="https://kilnandclay.pt/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: oklch(0.23 0.016 65);
+    --surface: oklch(0.28 0.019 62);
+    --surface-2: oklch(0.33 0.021 60);
+    --ink: oklch(0.95 0.012 85);
+    --muted: oklch(0.78 0.017 80);
+    --faint: oklch(0.62 0.015 78);
+    --accent: oklch(0.88 0.045 82);      /* warm bone glaze — primary */
+    --accent-ink: oklch(0.24 0.03 70);
+    --sage: oklch(0.76 0.055 150);       /* muted celadon — small accents/links */
+    --line: oklch(0.45 0.015 65 / 0.35);
+    --shadow: 0 22px 60px -26px oklch(0.10 0.02 60 / 0.85);
+
+    --step--1: clamp(0.84rem, 0.81rem + 0.15vw, 0.94rem);
+    --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+    --step-1:  clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+    --step-2:  clamp(1.5rem, 1.32rem + 0.9vw, 2.05rem);
+    --step-3:  clamp(2rem, 1.65rem + 1.75vw, 3rem);
+    --step-4:  clamp(2.5rem, 1.95rem + 2.75vw, 4.4rem);
+
+    --gap: clamp(1rem, 0.7rem + 1.5vw, 1.9rem);
+    --sp: clamp(4rem, 2.8rem + 5vw, 7rem);
+    --wrap: 70rem;
+    --radius: 1rem;
+    --z-nav: 100;
+  }
+  *,*::before,*::after{ box-sizing:border-box }
+  html{ scroll-behavior:smooth }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto } }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Hanken Grotesk", system-ui, sans-serif; font-size:var(--step-0);
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:Newsreader, Georgia, serif; font-weight:500; line-height:1.06;
+    letter-spacing:-0.015em; text-wrap:balance; margin:0 0 .5rem }
+  h1{ font-size:var(--step-4) } h2{ font-size:var(--step-3); margin-bottom:.7rem } h3{ font-size:var(--step-1) }
+  p{ max-width:64ch; text-wrap:pretty; margin:0 0 1rem }
+  a{ color:var(--sage); text-underline-offset:3px }
+  img{ max-width:100%; display:block }
+  .wrap{ width:min(100% - 2.5rem, var(--wrap)); margin-inline:auto }
+  .eyebrow{ font-size:var(--step--1); color:var(--sage); font-weight:600; letter-spacing:.04em;
+    text-transform:uppercase; margin:0 0 .8rem }
+  .lede{ font-size:var(--step-1); color:var(--muted); max-width:52ch; line-height:1.6 }
+
+  /* ---------- buttons ---------- */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+    background:var(--accent); color:var(--accent-ink); font-weight:600; font-size:var(--step-0);
+    padding:.85rem 1.6rem; border-radius:999px; border:0; cursor:pointer; text-decoration:none;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1), filter .25s ease; }
+  .btn:hover{ transform:translateY(-2px); filter:brightness(1.04) }
+  .btn:focus-visible{ outline:3px solid var(--ink); outline-offset:3px }
+  .btn--ghost{ background:transparent; color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--line) }
+  .btn--ghost:hover{ box-shadow:inset 0 0 0 1.5px var(--muted) }
+  @media (prefers-reduced-motion: reduce){ .btn{ transition:none } .btn:hover{ transform:none } }
+
+  /* ---------- nav ---------- */
+  .nav{ position:sticky; top:0; z-index:var(--z-nav); backdrop-filter:blur(10px);
+    background:oklch(0.23 0.016 65 / 0.82); border-bottom:1px solid var(--line) }
+  .nav .wrap{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.9rem }
+  .brand{ font-family:Newsreader,serif; font-size:var(--step-1); color:var(--ink); text-decoration:none; font-weight:600; letter-spacing:-0.01em }
+  .brand em{ font-style:italic; color:var(--sage); font-weight:400 }
+  .links{ display:none; gap:1.8rem; align-items:center; list-style:none; margin:0; padding:0 }
+  @media (min-width:900px){ .links{ display:flex } }
+  .links a{ color:var(--muted); text-decoration:none; font-size:var(--step--1); font-weight:500; position:relative; padding:.3rem 0 }
+  .links a:hover{ color:var(--ink) }
+  .links a.active{ color:var(--ink) }
+  .links a.active::after{ content:""; position:absolute; left:0; right:0; bottom:-3px; height:1.5px; background:var(--sage) }
+  .nav-cta{ display:inline-flex; padding:.6rem 1.2rem }
+  /* mobile menu */
+  .menu-btn{ display:inline-flex; flex-direction:column; gap:4px; background:none; border:0; cursor:pointer; padding:.5rem }
+  @media (min-width:900px){ .menu-btn{ display:none } }
+  .menu-btn span{ width:22px; height:2px; background:var(--ink); border-radius:2px }
+  .mobile{ display:none; border-top:1px solid var(--line) }
+  .mobile.open{ display:block }
+  @media (min-width:900px){ .mobile{ display:none !important } }
+  .mobile ul{ list-style:none; margin:0; padding:.6rem 0 1rem }
+  .mobile a{ display:block; padding:.8rem 1.25rem; color:var(--ink); text-decoration:none; font-size:var(--step-0) }
+  .mobile a.active{ color:var(--sage) }
+
+  /* ---------- pages (SPA routing) ---------- */
+  .page{ display:none }
+  .page.active{ display:block; animation:fade .4s ease both }
+  @keyframes fade{ from{ opacity:0 } to{ opacity:1 } }
+  @media (prefers-reduced-motion: reduce){ .page.active{ animation:none } }
+  section.band{ padding-block:var(--sp) }
+  .band.alt{ background:var(--surface) }
+
+  /* ---------- hero ---------- */
+  .hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(1.5rem,1rem+3vw,3.5rem); align-items:center }
+  @media (max-width:820px){ .hero-grid{ grid-template-columns:1fr } }
+  .hero-grid img{ border-radius:var(--radius); box-shadow:var(--shadow); aspect-ratio:4/5; object-fit:cover; width:100% }
+  .tag{ display:inline-flex; align-items:center; color:var(--muted); font-size:var(--step--1);
+    border:1px solid var(--line); border-radius:999px; padding:.35rem .95rem; margin-bottom:1.3rem; letter-spacing:.02em }
+  .cta-row{ display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.9rem }
+  .reassure{ margin-top:1.1rem; color:var(--faint); font-size:var(--step--1) }
+
+  /* ---------- feature steps ---------- */
+  .steps{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:var(--gap); margin-top:2.6rem }
+  .step h3{ margin-bottom:.4rem }
+  .step .n{ font-family:Newsreader,serif; color:var(--sage); font-size:var(--step-2); display:block; margin-bottom:.3rem }
+  .step p{ color:var(--muted); font-size:var(--step-0); margin:0 }
+
+  .gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gap); margin-top:2.8rem }
+  @media (max-width:640px){ .gallery{ grid-template-columns:1fr 1fr } }
+  .gallery img{ border-radius:.8rem; aspect-ratio:1; object-fit:cover; width:100% }
+
+  /* ---------- schedule ---------- */
+  .rows{ margin-top:2.4rem; border-top:1px solid var(--line) }
+  .row{ display:flex; align-items:center; justify-content:space-between; gap:1.2rem; flex-wrap:wrap;
+    padding:1.25rem 0; border-bottom:1px solid var(--line) }
+  .row .when{ font-family:Newsreader,serif; font-size:var(--step-1); margin-bottom:.15rem }
+  .row .meta{ color:var(--muted); font-size:var(--step--1) }
+  .seats{ font-size:var(--step--1); color:var(--sage); font-weight:600 }
+  .seats.low{ color:var(--accent) }
+
+  /* ---------- pricing ---------- */
+  .prices{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--gap); margin-top:2.6rem }
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.9rem; display:flex; flex-direction:column }
+  .card.feature{ background:var(--surface-2); box-shadow:var(--shadow) }
+  .card .pick{ align-self:flex-start; background:var(--accent); color:var(--accent-ink); font-size:.72rem;
+    font-weight:600; padding:.28rem .75rem; border-radius:999px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:1rem }
+  .card .amt{ font-family:Newsreader,serif; font-size:var(--step-3); margin:.3rem 0 }
+  .card .amt small{ font-size:var(--step--1); color:var(--muted); font-family:"Hanken Grotesk",sans-serif }
+  .card ul{ list-style:none; padding:0; margin:1.1rem 0 1.6rem; display:grid; gap:.7rem }
+  .card li{ padding-left:1.5rem; position:relative; color:var(--muted); font-size:var(--step-0) }
+  .card li::before{ content:"✦"; position:absolute; left:0; color:var(--sage); font-size:.85em; top:.15em }
+  .card .btn{ width:100%; margin-top:auto }
+
+  /* ---------- booking ---------- */
+  .book-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(1.5rem,1rem+3vw,3.5rem); align-items:start }
+  @media (max-width:820px){ .book-grid{ grid-template-columns:1fr } }
+  form{ display:grid; gap:1.2rem; background:var(--surface); padding:clamp(1.5rem,1rem+2vw,2.3rem); border-radius:var(--radius); border:1px solid var(--line) }
+  .field{ display:grid; gap:.45rem }
+  .field.two{ grid-template-columns:1fr 1fr; gap:1rem }
+  @media (max-width:480px){ .field.two{ grid-template-columns:1fr } }
+  label{ font-size:var(--step--1); color:var(--muted); font-weight:500 }
+  .req{ color:var(--sage) }
+  input,select{ font:inherit; color:var(--ink); background:var(--bg); border:1px solid var(--line);
+    border-radius:.6rem; padding:.8rem .95rem; width:100%; min-height:46px }
+  input::placeholder{ color:var(--faint) }
+  input:focus-visible,select:focus-visible{ outline:3px solid var(--sage); outline-offset:1px; border-color:transparent }
+  input[aria-invalid="true"]{ border-color:var(--accent) }
+  .err{ color:var(--accent); font-size:var(--step--1); min-height:1.1em }
+  .form-note{ color:var(--faint); font-size:var(--step--1); margin:0 }
+  .success{ background:var(--surface-2); border:1px solid var(--sage); border-radius:var(--radius); padding:2.2rem; text-align:center; display:none }
+  .success.show{ display:block }
+  .success .ring{ width:3rem;height:3rem;border-radius:50%;background:var(--sage);color:var(--accent-ink);
+    display:grid;place-items:center;margin:0 auto 1rem;font-size:1.4rem;font-weight:700 }
+  .success p{ margin-inline:auto }
+
+  /* ---------- studio ---------- */
+  .studio-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,1rem+3vw,3rem); align-items:center }
+  @media (max-width:760px){ .studio-grid{ grid-template-columns:1fr } }
+  .studio-grid img{ border-radius:var(--radius); aspect-ratio:3/2; object-fit:cover; width:100%; box-shadow:var(--shadow) }
+  address.addr{ font-style:normal; color:var(--muted); margin-top:1.2rem; line-height:2 }
+  .addr strong{ color:var(--ink); font-weight:600 }
+
+  /* ---------- footer ---------- */
+  footer{ border-top:1px solid var(--line); padding-block:2.4rem; color:var(--faint); font-size:var(--step--1) }
+  footer .wrap{ display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center }
+  footer a{ color:var(--muted) }
+</style>
+</head>
+<body id="top">
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" data-route="home">Kiln <em>&amp;</em> Clay</a>
+    <ul class="links">
+      <li><a href="#classes" data-route="classes">Classes</a></li>
+      <li><a href="#schedule" data-route="schedule">Schedule</a></li>
+      <li><a href="#pricing" data-route="pricing">Pricing</a></li>
+      <li><a href="#studio" data-route="studio">Studio</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:.5rem">
+      <a class="btn nav-cta" href="#book" data-route="book">Book a class</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile" id="mobileMenu" aria-label="Mobile">
+    <ul>
+      <li><a href="#classes" data-route="classes">Classes</a></li>
+      <li><a href="#schedule" data-route="schedule">Schedule</a></li>
+      <li><a href="#pricing" data-route="pricing">Pricing</a></li>
+      <li><a href="#studio" data-route="studio">Studio</a></li>
+      <li><a href="#book" data-route="book">Book a class</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <article class="page active" id="page-home">
+    <section class="band">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="tag">Weekend classes in Lisbon</span>
+          <h1>Make something with your hands this weekend.</h1>
+          <p class="lede">A small, warm ceramics studio where complete beginners learn to throw on the wheel. You don't need any experience or a shred of talent to start, just a couple of free hours that tend to feel like a proper break.</p>
+          <div class="cta-row">
+            <a class="btn" href="#book" data-route="book">Book a class</a>
+            <a class="btn btn--ghost" href="#classes" data-route="classes">See what a class is like</a>
+          </div>
+          <p class="reassure">Never touched clay? Perfect. That's exactly who these mornings are for.</p>
+        </div>
+        <img src="/images/hero.jpg" alt="Hands centring wet clay on a spinning pottery wheel" width="1000" height="1250" fetchpriority="high">
+      </div>
+    </section>
+    <section class="band alt">
+      <div class="wrap">
+        <p class="eyebrow">Why people come</p>
+        <h2>A small studio that does one thing well.</h2>
+        <p class="lede">Classes stay small and unhurried, and nobody expects you to arrive knowing anything. Most people leave a little calmer than they came in.</p>
+        <div class="steps">
+          <div class="step"><h3>A real studio</h3><p>Working kilns, well-worn wheels, good light and good coffee. Not a pop-up.</p></div>
+          <div class="step"><h3>Tiny groups</h3><p>Six seats a session, so you get real hands-on time and never feel rushed.</p></div>
+          <div class="step"><h3>You take pieces home</h3><p>We fire and glaze what you make. Collect your cup and bowl two weeks later.</p></div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- CLASSES -->
+  <article class="page" id="page-classes">
+    <section class="band">
+      <div class="wrap">
+        <p class="eyebrow">What a morning looks like</p>
+        <h2>Two and a half hours, one lump of clay, zero expectations.</h2>
+        <p class="lede">You'll sit down at a wheel with a small group, a cup of coffee, and someone who guides your hands the whole way through. You leave the mess to us.</p>
+        <div class="steps">
+          <div class="step"><span class="n">01</span><h3>We start slow</h3><p>A quick demo, then straight onto the wheel. You'll centre your first ball of clay within ten minutes. Hands on, not watching slides.</p></div>
+          <div class="step"><span class="n">02</span><h3>You make two pieces</h3><p>A cup and a small bowl, guided step by step. Wonky is welcome. Wonky is character.</p></div>
+          <div class="step"><span class="n">03</span><h3>We fire &amp; glaze</h3><p>Leave your pieces with us. We trim, glaze and kiln-fire them, and you collect them two weeks later.</p></div>
+        </div>
+        <div class="gallery">
+          <img loading="lazy" src="/images/class-1.jpg" alt="A potter opening the wall of a clay cylinder on the wheel" width="900" height="900">
+          <img loading="lazy" src="/images/class-2.jpg" alt="Finished glazed ceramic mugs on a wooden studio shelf" width="600" height="600">
+          <img loading="lazy" src="/images/class-3.jpg" alt="Rows of handmade bowls waiting to be fired" width="600" height="600">
+        </div>
+        <div class="cta-row"><a class="btn" href="#book" data-route="book">Book a class</a></div>
+      </div>
+    </section>
+  </article>
+
+  <!-- SCHEDULE -->
+  <article class="page" id="page-schedule">
+    <section class="band">
+      <div class="wrap">
+        <p class="eyebrow">Upcoming weekends</p>
+        <h2>Pick a morning.</h2>
+        <p class="lede">Small groups of six. When a session shows only a couple of seats, it usually goes by midweek.</p>
+        <div class="rows" role="list">
+          <div class="row" role="listitem">
+            <div><div class="when">Saturday 2 Aug</div><div class="meta">10:00–12:30 · Beginners' wheel</div></div>
+            <div class="seats">4 seats left</div>
+            <a class="btn btn--ghost" href="#book" data-route="book" data-date="Sat 2 Aug, 10:00">Book</a>
+          </div>
+          <div class="row" role="listitem">
+            <div><div class="when">Sunday 3 Aug</div><div class="meta">10:00–12:30 · Beginners' wheel</div></div>
+            <div class="seats low">2 seats left</div>
+            <a class="btn btn--ghost" href="#book" data-route="book" data-date="Sun 3 Aug, 10:00">Book</a>
+          </div>
+          <div class="row" role="listitem">
+            <div><div class="when">Saturday 9 Aug</div><div class="meta">10:00–12:30 · Beginners' wheel</div></div>
+            <div class="seats">6 seats left</div>
+            <a class="btn btn--ghost" href="#book" data-route="book" data-date="Sat 9 Aug, 10:00">Book</a>
+          </div>
+        </div>
+        <p class="form-note" style="margin-top:1.2rem">Dates are examples for now; the studio confirms the live schedule.</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- PRICING -->
+  <article class="page" id="page-pricing">
+    <section class="band">
+      <div class="wrap">
+        <p class="eyebrow">Simple pricing</p>
+        <h2>One price, everything included.</h2>
+        <div class="prices">
+          <div class="card">
+            <h3>Solo seat</h3>
+            <div class="amt">€65 <small>/ person</small></div>
+            <ul><li>2.5-hour guided class</li><li>All clay, tools &amp; an apron</li><li>Firing &amp; glazing of two pieces</li></ul>
+            <a class="btn btn--ghost" href="#book" data-route="book">Book a seat</a>
+          </div>
+          <div class="card feature">
+            <span class="pick">Most booked</span>
+            <h3>Two together</h3>
+            <div class="amt">€120 <small>/ two people</small></div>
+            <ul><li>Side-by-side wheels</li><li>Everything in a solo seat, twice over</li><li>Made for a date or a friend</li></ul>
+            <a class="btn" href="#book" data-route="book">Book for two</a>
+          </div>
+          <div class="card">
+            <h3>Private group</h3>
+            <div class="amt">From €300 <small>/ up to 6</small></div>
+            <ul><li>The whole studio, just you</li><li>Birthdays, hen dos, team days</li><li>Flexible weekend slots</li></ul>
+            <a class="btn btn--ghost" href="#book" data-route="book">Enquire</a>
+          </div>
+        </div>
+        <p class="form-note" style="margin-top:1.3rem">Prices are examples for the studio to confirm.</p>
+      </div>
+    </section>
+  </article>
+
+  <!-- BOOK -->
+  <article class="page" id="page-book">
+    <section class="band">
+      <div class="wrap book-grid">
+        <div>
+          <p class="eyebrow">Book your seat</p>
+          <h2>Save your spot at the wheel.</h2>
+          <p class="lede">Takes about a minute. We'll email you a confirmation and everything you need to know before the day.</p>
+          <p class="reassure">No payment needed to reserve. Pay at the studio or by link once we confirm.</p>
+        </div>
+        <div>
+          <form id="bookingForm" novalidate>
+            <div class="field">
+              <label for="date">Which session <span class="req">*</span></label>
+              <select id="date" name="date" required aria-describedby="date-err">
+                <option value="">Choose a weekend…</option>
+                <option>Sat 2 Aug, 10:00</option>
+                <option>Sun 3 Aug, 10:00</option>
+                <option>Sat 9 Aug, 10:00</option>
+                <option>I'm flexible / private group</option>
+              </select>
+              <div class="err" id="date-err" aria-live="polite"></div>
+            </div>
+            <div class="field two">
+              <div class="field">
+                <label for="name">Your name <span class="req">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+                <div class="err" id="name-err" aria-live="polite"></div>
+              </div>
+              <div class="field">
+                <label for="people">How many <span class="req">*</span></label>
+                <select id="people" name="people" required>
+                  <option value="1">Just me</option><option value="2">Two of us</option>
+                  <option value="3">3</option><option value="4">4</option>
+                  <option value="5">5</option><option value="6">6 (private)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err" placeholder="you@example.com">
+              <div class="err" id="email-err" aria-live="polite"></div>
+            </div>
+            <button class="btn" type="submit">Request my spot</button>
+            <p class="form-note">This is a demo form. Connect it to the studio's booking or email service to go live.</p>
+          </form>
+          <div class="success" id="success" role="status" aria-live="polite" tabindex="-1">
+            <div class="ring">✓</div>
+            <h3>Your spot is requested.</h3>
+            <p>Thanks. We'll email you a confirmation shortly. See you at the wheel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- STUDIO -->
+  <article class="page" id="page-studio">
+    <section class="band">
+      <div class="wrap studio-grid">
+        <img loading="lazy" src="/images/studio.jpg" alt="A warm, lamp-lit ceramics studio with shelves of drying pottery" width="1000" height="667">
+        <div>
+          <p class="eyebrow">The studio</p>
+          <h2>A working studio, not a showroom.</h2>
+          <p>Kiln &amp; Clay is a small independent studio tucked into a quiet street in Lisbon. Real kilns, well-worn wheels, good light and good coffee. Between classes it's where our resident makers work, so you're learning in a room that actually smells of clay.</p>
+          <address class="addr">
+            <strong>Rua da Cerâmica 00, Lisbon</strong> (address to confirm)<br>
+            Saturdays &amp; Sundays, 10:00–12:30<br>
+            <a href="#book" data-route="book">Book a class</a> · <a href="mailto:ola@kilnandclay.pt">ola@kilnandclay.pt</a>
+          </address>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> Kiln &amp; Clay · Lisbon · Made by hand.</div>
+    <div><a href="mailto:ola@kilnandclay.pt">ola@kilnandclay.pt</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- SPA routing: each nav item is its own page ---------- */
+  var routes = ['home','classes','schedule','pricing','book','studio'];
+  var pages = document.querySelectorAll('.page');
+  var routeLinks = document.querySelectorAll('[data-route]');
+  var titles = {
+    home:'Kiln & Clay · Weekend Pottery Classes in Lisbon',
+    classes:'What a class is like · Kiln & Clay',
+    schedule:'Schedule · Kiln & Clay',
+    pricing:'Pricing · Kiln & Clay',
+    book:'Book a class · Kiln & Clay',
+    studio:'The studio · Kiln & Clay'
+  };
+  function setRoute(){
+    var hash = (location.hash || '#home').replace('#','');
+    if(routes.indexOf(hash) === -1) hash = 'home';
+    pages.forEach(function(p){ p.classList.toggle('active', p.id === 'page-' + hash); });
+    routeLinks.forEach(function(a){ a.classList.toggle('active', a.dataset.route === hash); });
+    document.title = titles[hash] || titles.home;
+    closeMenu();
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', setRoute);
+
+  /* ---------- mobile menu ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var mobile = document.getElementById('mobileMenu');
+  function closeMenu(){ mobile.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  menuBtn.addEventListener('click', function(){
+    var open = mobile.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* ---------- schedule "Book" prefills the form ---------- */
+  document.querySelectorAll('[data-date]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var sel = document.getElementById('date');
+      var val = el.getAttribute('data-date');
+      for (var i=0;i<sel.options.length;i++){ if(sel.options[i].text===val){ sel.selectedIndex=i; break; } }
+    });
+  });
+
+  /* ---------- booking form validation ---------- */
+  var form = document.getElementById('bookingForm');
+  var success = document.getElementById('success');
+  function setErr(id, msg){
+    var input = document.getElementById(id);
+    var err = document.getElementById(id+'-err');
+    if(err) err.textContent = msg || '';
+    if(msg){ input.setAttribute('aria-invalid','true'); } else { input.removeAttribute('aria-invalid'); }
+    return !msg;
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true;
+    ok = setErr('date', document.getElementById('date').value ? '' : 'Please choose a session.') && ok;
+    ok = setErr('name', document.getElementById('name').value.trim() ? '' : 'Please add your name.') && ok;
+    var email = document.getElementById('email').value.trim();
+    ok = setErr('email', /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) ? '' : 'Please enter a valid email.') && ok;
+    if(!ok){ var f = form.querySelector('[aria-invalid="true"]'); if(f) f.focus(); return; }
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.focus();
+  });
+
+  setRoute();
+</script>
+</body>
+</html>
